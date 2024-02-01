@@ -22,8 +22,8 @@
         }
         .box{
             position: absolute;
-           height: 200px;
-           width: 200px;
+           height: 11rem;
+           width: 12rem;
            border: 3px solid black;
            border-radius: 15px;
            display: flex;
@@ -33,36 +33,36 @@
         }
        
         #box1{
-            top:70px;
-            left: 100px;
+            top:10%;
+            left: 6%;
             background-color: honeydew;
             box-shadow: 18px 18px 15px #444;
         }
         #box2{
-            top: 350px;
-            left: 100px;
+            bottom: 10%;
+            left: 6%;
             background-color:#FFC54D;
             box-shadow: 18px 18px 15px #444;
         }
         #box3{
             
-            height: 260px;
-            width: 270px;
-            top: 180px ;
-            left: 530px;
+            height: 15rem;
+            width: 16rem;
+            top: 32%;
+            left: 40%;
             background-color: navajowhite;
             box-shadow: 18px 18px 15px #444;
         }
         #box4{
-            top:70px;
-            right:100px ;
+            top:10%;
+            right:6%;
             background-color:  #66BFBF;
 
             box-shadow: 18px 18px 15px #444;
         }
         #box5{
-            top:350px;
-            right: 100px;
+            bottom: 10%;
+            right: 6%;
             background-color: #FAD4D4;
             box-shadow: 18px 18px 15px #444;
         }
@@ -78,18 +78,21 @@
             font-size: 20px;
             top:120px;
         }
-        .output{
+        /* .output{
             font-size: 30px;
             position: absolute;
             top:180px;
             left:80px;
-            }
+            } */
         .btn{
             height: 40px;
             width: 100px;
             border-radius: 10px;
             color: black;
             font-size: 20px;
+            position: absolute;
+            top:70%;
+            left:27%;
         }
         .btn:hover {
             transform: scale(1.2);
@@ -101,6 +104,80 @@
         }
         .hover:hover{
             transform: scale(1.2);
+        }
+        @media screen  and (max-width:900px) {
+            #box3{
+                height: 13rem;
+                width: 12rem;
+            }
+            .input1 {
+                height: 23px;
+                font-size: 14px;
+                top: 24%;
+                width: 10rem;
+            }
+            .input2{
+                height: 23px;
+                font-size: 14px;
+                top: 44%;
+                width: 10rem;
+            }
+          .btn{  
+            height: 30px;
+            width: 97px;
+            border-radius: 10px;
+            color: black;
+            font-size: 17px;
+            left: 23% ;
+            }
+           
+        }
+        @media screen  and (max-width:750px) {
+            .box{
+                height: 9rem;
+                width: 9rem;
+            }
+                #box1{
+                    top: 4%; 
+                }
+                #box4{
+                    top: 4%;
+                }
+                #box2{
+                    bottom: 4%;
+                }
+                #box5{
+                    bottom: 4%;
+                }
+                #box3{
+                    height: 9rem;
+                    width: 11rem;
+                    top: 35%;
+                    left: 38%;
+                }
+        }
+        @media screen  and (max-width:500px) {
+            
+            #box3{
+                left: 30%;
+            }
+        }
+        @media screen  and (max-width:450px) {
+            #box1{
+                top: 10%;
+            }
+            #box4{
+                top: 10%;
+            }
+            #box3{
+                left: 30%;
+            }
+            #box2{
+                bottom: 20%;
+            }
+            #box5{
+                bottom: 20%;
+            }
         }
     </style>
     <script>
