@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="../bootstrap.min.css"
+    />
+    <style>
+        *{
+          margin: 0px;
+          padding: 0px;
+        }
+        body{
+            background-color: #ff4c68;
+            font-family: 'Sacramento', cursive;
+            font-weight: bolder;
+        }
+        .box{
+            position: absolute;
+           height: 200px;
+           width: 200px;
+           border: 3px solid black;
+           border-radius: 15px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 30px;
+        }
+       
+        #box1{
+            top:70px;
+            left: 100px;
+            background-color: honeydew;
+            box-shadow: 18px 18px 15px #444;
+        }
+        #box2{
+            top: 350px;
+            left: 100px;
+            background-color:#FFC54D;
+            box-shadow: 18px 18px 15px #444;
+        }
+        #box3{
+            
+            height: 260px;
+            width: 270px;
+            top: 180px ;
+            left: 530px;
+            background-color: navajowhite;
+            box-shadow: 18px 18px 15px #444;
+        }
+        #box4{
+            top:70px;
+            right:100px ;
+            background-color:  #66BFBF;
+
+            box-shadow: 18px 18px 15px #444;
+        }
+        #box5{
+            top:350px;
+            right: 100px;
+            background-color: #FAD4D4;
+            box-shadow: 18px 18px 15px #444;
+        }
+        .input1{
+            position: absolute;
+            height: 25px;
+            font-size: 20px;
+            top: 60px;
+        }
+        .input2{
+            position: absolute;
+            height: 25px;
+            font-size: 20px;
+            top:120px;
+        }
+        .output{
+            font-size: 30px;
+            position: absolute;
+            top:180px;
+            left:80px;
+            }
+        .btn{
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+            color: black;
+            font-size: 20px;
+        }
+        .btn:hover {
+            transform: scale(1.2);
+            background-color: black;
+            color: white;
+        }
+        .hover, .btn{
+           transition: transform .5s;
+        }
+        .hover:hover{
+            transform: scale(1.2);
+        }
+    </style>
+    <script>
+        function ch(){
+        a=document.getElementById("n1").value
+        b=document.getElementById("n2").value
+        c=parseInt(a)+parseInt(b);
+        d=parseInt(a)-parseInt(b);
+        e=parseInt(a)/parseInt(b);
+        f=parseInt(a)*parseInt(b);
+        document.getElementById("box1").innerHTML=a+" + "+b+" = "+c
+        document.getElementById("box2").innerHTML=a+" - "+b+" = "+d
+        document.getElementById("box4").innerHTML=a+" / "+b+" = "+e
+        document.getElementById("box5").innerHTML=a+" * "+b+" = "+f
+        }
+    </script>
+</head>
+<body>
+    
+        <div class="box hover" id="box1">Sum</div>
+        <div class="box hover" id="box2">Subtract</div>
+        <div class="box" id="box3">
+            <input class="input1" type="text"  id="n1" placeholder="Enter 1st number"><br><br>
+            <input class="input2" type="text"  id="n2" placeholder="Enter 2nd number"><br><br>
+            <button class="btn btn-primary output" onclick="ch()">Click Me!</button>
+        </div>
+        <div class="box hover" id="box4">Divide</div>
+        <div class="box hover" id="box5">Multiply</div>
+</body>
+</html>
